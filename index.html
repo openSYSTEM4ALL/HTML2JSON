@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Content 2 Json</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/monokai.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="script/ang.js"></script>
+</head>
+
+<body data-ng-app="myApp">
+    <header>
+        <div class="navbar-fixed">
+            <nav class="light-blue">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div class="row">
+                            <div class="col s3">
+                                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                            </div>
+                            <div class="col s7">
+                                <a href="" class="brand-logo">HTML Content 2 JSON</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <ul class="side-nav fixed">
+            <nav class="light-blue">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div class="col s12 center">
+                            <span>HTML2JSON</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="logo">
+                <div id="logo-container" class="brand-logo center">
+                    <object id="front-page-logo" type="image/png" data="images/logo.png">Your browser does not support Images</object>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <li ng-hide="true"><a href="#/login" class="waves-effect waves-teal"><span class="new badge" data-badge-caption="">Guest</span>Login</a>                </li>
+            <div class="divider" ng-hide="true"></div>
+            <li><a href="#/" class="waves-effect waves-teal"><span class="new badge"></span>Generate Entry</a></li>
+        </ul>
+        <!--SideNav fro mobile-->
+        <ul class="side-nav" id="nav-mobile">
+            <nav class="light-blue">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div class="col s12">
+                            <img src="images/tacos_logo.png" alt="" style="padding-right:15px; height: 55px;" />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="logo">
+                <div id="logo-container" class="brand-logo center">
+                    <object id="front-page-logo" type="image/png" data="images/logo.png">Your browser does not support Images</object>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <li ng-hide="true"><a href="#/login" class="waves-effect waves-teal"><span class="new badge" data-badge-caption="">Guest</span>Login</a></li>
+            <div class="divider" ng-hide="true"></div>
+            <li><a href="#/" class="waves-effect waves-teal"><span class="new badge">4</span>Generate Entry</a></li>
+        </ul>
+        <!--Splash Screen-->
+        <div id="splashscreen">
+            <div class="">
+                <ul>
+                    <li>
+                        <div class="centered-splash-text">Loading material for you</div>
+                    </li>
+                    <li>
+                        <div class="preloader-wrapper big active centered-splash">
+                            <div class="spinner-layer spinner-blue-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End Splash Screen-->
+    </header>
+    <main>
+        <div ng-view=""></div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Convert HTML Content 2 JSON </h5>
+                    <p class="grey-text text-lighten-4">Grab Content from HTML web pages in Json</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul class="white-text">
+                        <li><a href="https://github.com/openSYSTEM4ALL/HTML2JSON/issues" class="waves-effect waves-teal white-text">Contact Us</a></li>
+                        <li><a href="https://github.com/openSYSTEM4ALL/HTML2JSON/" class="waves-effect waves-teal white-text">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                HTML2JSON&copy; 2017 Copyright
+                <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="script/app.js"></script>
+     <!--live code editor.js-->
+    <script src="js/codemirror.js"></script>
+    <script src="js/xml/xml.js"></script>
+    <script src="js/javascript/javascript.js"></script>
+    <script src="js/css/css.js"></script>
+    <script src="js/htmlmixed.js"></script>
+    <script src="js/multiplex.js"></script>
+    <script src="js/htmlembedded.js"></script>
+    <script src="js/compromise.min.js"></script>
+</body>
+
+</html>

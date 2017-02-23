@@ -1,0 +1,68 @@
+li.active {
+    background-color: #03a9f4 !important;
+}
+
+li.active a {
+    color: #fff !important;
+}
+li.active span {
+    color: #fff !important;
+}
+
+.parallax-container {
+    max-height: 400px
+}
+
+#splashscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1001 !important;
+}
+
+.centered-splash {
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+}
+
+.centered-splash-text {
+    position: fixed !important;
+    top: 50%;
+    left: 45%;
+}
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+     
+
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
