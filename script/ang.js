@@ -1,7 +1,11 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute','ngSanitize']);
 
 app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
+    $routeProvider.when("/about", {
+        controller: "aboutController",
+        templateUrl: "templates/about.html"
+    });
     $routeProvider.when("/", {
         controller: "entryGenerateController",
         templateUrl: "templates/generate-entry.html"
@@ -47,8 +51,8 @@ app.controller('entryGenerateController', ["$scope", "$http", function ($scope, 
         var jsonObject = {};
         result.forEach(function (s) {
             s = s.trim();
-            s = s.replace(/ +(?= )/g,'');
-            var str = s.replace(/ /g,"\n");
+            s = s.replace(/ +(?= )/g, '');
+            var str = s.replace(/ /g, "\n");
             var r = nlp(str);
             if (s.length > 3) {
                 var nouns = r.topics().out('array');
@@ -73,11 +77,11 @@ app.controller('entryGenerateController', ["$scope", "$http", function ($scope, 
 
                     } else {
                         // no nouns found
-                       var words = s.split(' ');
-                        if(words.length>1) {
+                        var words = s.split(' ');
+                        if (words.length > 1) {
                             var key_w = words[0].trim() + '_' + words[1].trim();
                             jsonObject[key_w] = s;
-                        }else{
+                        } else {
                             jsonObject[words[0].trim()] = s;
                         }
 
@@ -113,4 +117,15 @@ app.controller('entryGenerateController', ["$scope", "$http", function ($scope, 
         return result;
     }
 
+}]);
+
+
+app.controller('aboutController', ["$scope", "$http", "$sce",function ($scope, $http,$sce) {
+    $http.get("/readme.md").then(function (res) {
+        var article = res.data;
+        var html = markdown.toHTML(article);
+        $scope.html = html;
+      
+        $sce.trustAsHtml($scope.html);
+    });
 }]);
