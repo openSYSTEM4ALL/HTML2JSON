@@ -1,5 +1,5 @@
 li.active {
-    background-color: #03a9f4 !important;
+    background-color: #00acc1 !important;
 }
 
 li.active a {
@@ -65,4 +65,7 @@ li.active span {
   -webkit-hyphens: auto;
   hyphens: auto;
 
+}
+#logo-container {
+    height: 250px !important;
 }

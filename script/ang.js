@@ -61,7 +61,7 @@ app.controller('entryGenerateController', ["$scope", "$http", function ($scope, 
                     }
 
                 } else {
-                    // no nouns found
+                    // no topics  found
                     var topics = r.nouns().out('array');
                     if (topics.length > 0) {
                         if (topics.length > 1) {
@@ -72,7 +72,7 @@ app.controller('entryGenerateController', ["$scope", "$http", function ($scope, 
                         }
 
                     } else {
-                        // no topics found
+                        // no nouns found
                        var words = s.split(' ');
                         if(words.length>1) {
                             var key_w = words[0].trim() + '_' + words[1].trim();
