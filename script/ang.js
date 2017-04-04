@@ -98,11 +98,13 @@ app.controller('entryGenerateController', ["$scope", "$http", function ($scope, 
     function extractTextFromHTML(html) {
         var tmp = document.createElement("DIV");
         tmp.innerHTML = html;
+        // removing script and noscript elements
         var scripts = tmp.getElementsByTagName('script');
         var i = scripts.length;
         while (i--) {
             scripts[i].parentNode.removeChild(scripts[i]);
         }
+        $(tmp).find('noscript').remove();
         var content = tmp.textContent || tmp.innerText;
         content = content.replace(/^\s*[\r\n]/gm, '').split('\n').map(Function.prototype.call, String.prototype.trim);
         content = removeDuplicate(content);
